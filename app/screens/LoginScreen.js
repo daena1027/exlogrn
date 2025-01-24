@@ -34,7 +34,7 @@ export default function LoginScreen({ navigation }) {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Welcome to EKO!</Header> 
+      <Header>Welcome!</Header> {/* Update the header from the source code "hello." to "Welcome to EKO!*/}
       <TextInput
         label="Email"
         returnKeyType="next"
@@ -60,14 +60,14 @@ export default function LoginScreen({ navigation }) {
         <TouchableOpacity
           onPress={() => navigation.navigate("ResetPasswordScreen")}
         >
-          <Text style={styles.forgot}>Forgot your password ?</Text>
+          <Text style={styles.forgot}>Forgot your password?</Text>
         </TouchableOpacity>
       </View>
       <Button mode="contained" onPress={onLoginPressed}>
         Log in
       </Button>
       <View style={styles.row}>
-        <Text>You do not have an account yet ?</Text>
+        <Text>Don't have an account yet?</Text>
       </View>
       <View style={styles.row}>
         <TouchableOpacity onPress={() => navigation.replace("RegisterScreen")}>
